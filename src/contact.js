@@ -1,5 +1,6 @@
 export function buildContactPage() {
     const content = document.querySelector('#content')
+    content.innerHTML = "";
     const containerDiv = document.createElement('div');
     containerDiv.classList.add('tab', 'tab3');
     const innerHTML = `

@@ -16,5 +16,5 @@ export function buildNavBar(){
            </ul>
         </div>`
         navContainerDiv.innerHTML = innerHTML;
-        content.appendChild(navContainerDiv)
+        document.body.insertBefore(navContainerDiv, content);
 }

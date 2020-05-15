@@ -1,12 +1,11 @@
-import {buildNavBar} from './nav-bar.js'
+import {buildNavBar} from './nav-bar.js';
 import {buildLandingPage} from './landing-page.js'
 import {buildMenuPage} from './menu.js'
 import { buildContactPage } from './contact.js';
 
+
 buildNavBar();
 buildLandingPage();
-buildMenuPage();
-buildContactPage();
 
 
 var navBtns = document.querySelectorAll('.nav-btn')
@@ -17,6 +16,8 @@ navBtns.forEach(btn => {
 });
 
 function changeTab(e){
+    var content = document.querySelector("#content");
+    content.innerHTML = "";
     var tab = e.target.id;
     var about = document.querySelector('.tab1');
     var menu = document.querySelector('.tab2');
@@ -26,18 +27,15 @@ function changeTab(e){
     });
     e.target.style.border = "solid"
     if(tab === 'contact'){
-        contact.style.display = 'flex';
-        menu.style.display = 'none';
-        about.style.display = 'none';
+        buildContactPage();
     } else if(tab === 'menu-btn'){
-        contact.style.display = 'none';
-        menu.style.display = 'flex';
-        about.style.display = 'none';
+        buildMenuPage();
     } else {
-        contact.style.display = 'none';
-        menu.style.display = 'none';
-        about.style.display = 'flex';
+        buildLandingPage();
     }
     
 }
+
+
+
 

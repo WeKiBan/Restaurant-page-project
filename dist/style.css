@@ -94,16 +94,8 @@ body {
     font-size: 18px;
 }
 
-.tab1 {
-    display: flex;
-}
-
-.tab2 {
-    display: none;
-}
 
 .tab3 {
-    display: none;
     justify-content: center;
 }
 
